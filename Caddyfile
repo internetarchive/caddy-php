@@ -1,4 +1,5 @@
 {
+  admin off
   log {
     output file /dev/stdout
   }
@@ -7,5 +8,6 @@
 http:// {
   root * /usr/share/caddy/
   php_fastcgi 127.0.0.1:9000
-  file_server
+  file_server browse
+  Access-Control-Allow-Origin *
 }
